@@ -41,6 +41,8 @@ endif()
 
 message("OS is ${OS}")
 
+configure_file(soem/ethercattype.h.in ${CMAKE_SOURCE_DIR}/soem/ethercattype.h)
+
 file(GLOB SOEM_SOURCES soem/*.c)
 file(GLOB OSAL_SOURCES osal/${OS}/*.c)
 file(GLOB OSHW_SOURCES oshw/${OS}/*.c)
